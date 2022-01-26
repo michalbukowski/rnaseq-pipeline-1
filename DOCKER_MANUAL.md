@@ -6,7 +6,7 @@ Bukowski M, Kosecka-Strojek M, Madry A, Zagorski-Przybylo R, Zadlo T, Gawron K, 
 If you find the pipeline useful, please cite the paper.
 
 ### 1. Setup the environment (optional but recommended)
-Optionally, in order to allow your user to run docker without root privileges, create a group docker and add your user to it. That however will itself require root privileges.
+Optionally, in order to allow your user to run docker without root privileges, create a group docker and add your user to it by replacing `your_user_name` with your user name. That however will itself require root privileges.
 ```
 sudo groupadd docker
 sudo usermod -aG docker your_user_name
