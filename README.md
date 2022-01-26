@@ -14,8 +14,8 @@ The pipeline was created and tested in the following set-up:
   - Pandas (1.1.4)
 - R (4.0.3):
   - Bioconductor DESeq2 (1.30.0)
-  - Bioconductor tximport ()
-  - optparse ()
+  - Bioconductor tximport (1.18.0)
+  - optparse (1.6.6)
 
 ### 2. Directory structure and pipeline files
 Names of the FASTQ files with reads in [NCBI BioProject](https://www.ncbi.nlm.nih.gov/bioproject/) [`PRJNA798259`](https://www.ncbi.nlm.nih.gov/bioproject?term=PRJNA798259%5BProject%20Accession%5D) follow the pattern, which is required by the pipeline: `{strain}_{group}_{setting}_{replica}_{reads}.fastq`, e.g. `rn_wt_lg_1_R1.fastq`. Regarding the strain, in the project data there are files only for `rn` (_Staphylococcus aureus_ RN4220). There are two groups: `wt` (wild type, the reference group), `mt` (mutant, _saoC_ gene mutant), sampled in two settings/conditions: `lg` (logarithmic growth phase) and `lt` (late growth phase). For each there are 3 replicas (`1` -- `3`). Reads of each are written to two files: `R1` and `R2`. All in all, there are 24 files.
