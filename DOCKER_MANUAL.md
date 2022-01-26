@@ -1,5 +1,4 @@
 ## Simple RNA-Seq pipeline in a Docker image
----
 The following manual was tested on Docker ver. 18.09.7, and describes how to run the DGE (differential gene expression) pipeline on Linux systems. For details see the following paper:
 
 Bukowski M, Kosecka-Strojek M, Madry A, Zagorski-Przybylo R, Zadlo T, Gawron K, Wladyka B (2022) _Staphylococcal saoABC operon codes for a DNA-binding protein SaoC implicated in the response to nutrient deficit_. [awaiting publication]
