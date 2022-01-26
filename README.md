@@ -40,11 +40,11 @@ In the working directory you can find the Snakefile describing the pipeline. Nec
 
 ### 3. Pipeline architecture
 The pipline described in the Snakefile encompasses the following stages:
-1. **index** -- preparation of an index of reference transcript sequences by Salmon
-1. **quant** -- read mapping and counts by Salmon
-1. **collect** -- preparation of metadata for Salmon quant files by scripts/collect.py
-1. **dge** -- differential gene expression by scripts/dge.r usitlising DESeq2 library
-1. **summary** -- generation of the final output in TSV format by scripts/summary.py
+1. **index** -- preparation of an index of reference transcript sequences with Salmon.
+1. **quant** -- read mapping and counts with Salmon.
+1. **collect** -- preparation of metadata for Salmon quant files with `scripts/collect.py`.
+1. **dge** -- differential gene expression with `scripts/dge.r` usitlising DESeq2 library.
+1. **summary** -- generation of the final output in TSV format with `scripts/summary.py`.
 
 More detailed description on how the pipeline works you will find in comments both in the Snakefile and the script files.
 
