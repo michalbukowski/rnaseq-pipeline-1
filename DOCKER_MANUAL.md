@@ -78,6 +78,7 @@ Inside the container your initial location will be `~/pipeline`, where the follo
   |    |--- summary.py
   |--- input/
   |    |--- reads/
+  |    |    |--- (...)
   |    |--- refs/
   |         |--- rn.fna
   |--- output/
