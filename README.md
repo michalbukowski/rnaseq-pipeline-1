@@ -1,5 +1,5 @@
 ## Simple RNA-Seq pipeline
-Differential gene expression pipeline utilising Salmon and Bioconductor DESeq2 for Illumina RNA-Seq squencing results for reversed stranded libraries. For detail see the following paper:
+Differential gene expression pipeline utilising Salmon and Bioconductor DESeq2 for Illumina RNA-Seq sequencing results for reversed stranded libraries. For detail see the following paper:
 
 Bukowski M, Kosecka-Strojek M, Madry A, Zagorski-Przybylo R, Zadlo T, Gawron K, Wladyka B (2022) _Staphylococcal saoABC operon codes for a DNA-binding protein SaoC implicated in the response to nutrient deficit_. [awaiting publication]
 
@@ -18,7 +18,7 @@ The pipeline was created and tested in the following set-up:
   - optparse ()
 
 ### 2. Directory structure and pipeline files
-Names of the FASTQ files with reads in [NCBI BioProject](https://www.ncbi.nlm.nih.gov/bioproject/) [`PRJNA798259`](https://www.ncbi.nlm.nih.gov/bioproject?term=PRJNA798259%5BProject%20Accession%5D) follow the pattern, which is required by the pipeline: `{strain}_{group}_{setting}_{replica}_{reads}.fastq`, e.g. `rn_wt_lg_1_R1.fastq`. Regarging strain, in the project data there are files only for `rn` (_Staphylococcus aureus_ RN4220). There are two groups: `wt` (wild type, the reference group), `mt` (mutant, _saoC_ gene mutant), sampled in two settings/conditions: `lg` (logarithmic growth phase) and `lt` (late growth phase). For each there are 3 replicas (`1` -- `3`). Reads of each are written to two files: `R1` and `R2`. All in all, there are 24 files.
+Names of the FASTQ files with reads in [NCBI BioProject](https://www.ncbi.nlm.nih.gov/bioproject/) [`PRJNA798259`](https://www.ncbi.nlm.nih.gov/bioproject?term=PRJNA798259%5BProject%20Accession%5D) follow the pattern, which is required by the pipeline: `{strain}_{group}_{setting}_{replica}_{reads}.fastq`, e.g. `rn_wt_lg_1_R1.fastq`. Regarding the strain, in the project data there are files only for `rn` (_Staphylococcus aureus_ RN4220). There are two groups: `wt` (wild type, the reference group), `mt` (mutant, _saoC_ gene mutant), sampled in two settings/conditions: `lg` (logarithmic growth phase) and `lt` (late growth phase). For each there are 3 replicas (`1` -- `3`). Reads of each are written to two files: `R1` and `R2`. All in all, there are 24 files.
 
 The pipeline utilises the following directory structure:
 ```
@@ -43,7 +43,7 @@ The pipline described in the Snakefile encompasses the following stages:
 1. **index** -- preparation of an index of reference transcript sequences with Salmon.
 1. **quant** -- read mapping and counts with Salmon.
 1. **collect** -- preparation of metadata for Salmon quant files with `scripts/collect.py`.
-1. **dge** -- differential gene expression with `scripts/dge.r` usitlising DESeq2 library.
+1. **dge** -- differential gene expression with `scripts/dge.r` utilising DESeq2 library.
 1. **summary** -- generation of the final output in TSV format with `scripts/summary.py`.
 
 More detailed description on how the pipeline works you will find in comments both in the Snakefile and the script files.
