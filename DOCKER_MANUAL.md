@@ -38,24 +38,24 @@ USER rnaseq
 ### 4. Build your personalised image
 Build a customised image `my-ubuntu-rnaseq/20.04` using the created Dockerfile and the original image `ubuntu-rnaseq/20.04` by running the following command in the directory where `Dockerfile` is located. To share your files with the container easily, it is advisable to put in the Dockerfile your system user id (`uid`), your system user group id (`gid`). To do that you need to replace `your_user_uid` and `your_user_gid` with proper numbers. By default, if you are the only user your, that will be `1000` in both cases. Use `id` command to look them up. Regarding `your_password`, feel free to come up with anything. I does not have to be you system user password, and actually for safety reasons it should not. Put your password into apostrophes to avoid any conflict between special characters used in your password and their Bash meaning. Having a password will allow you to make any modifications, by using `sudo` command, in the finally created container, should you need to do that.
 ```
-docker build                             \
-     -t         my-ubuntu-rnaseq:20.04   \
+docker build                                 \
+         -t         my-ubuntu-rnaseq:20.04   \
 	--build-arg uid=your_user_uid        \
 	--build-arg gid=your_user_gid        \
 	--build-arg password='your_password' \
-	  ./
+          ./
 ```
 ### 5. Create the _rnaseq_ container
 Having your personalised image, now you can create a container from that image. The `/path/to/reads/in/your/system` must indicate the directory with RNA-Seq reads in FASTQ format (uncompressed). The reads are available at NCBI SRA database through [NCBI BioProject](https://www.ncbi.nlm.nih.gov/bioproject/) accession number [`PRJNA798259`](https://www.ncbi.nlm.nih.gov/bioproject?term=PRJNA798259%5BProject%20Accession%5D). File names must be preserved. See the list of RNA-Seq result files in the appendix. The path `/path/to/output/in/your/system` must indicate a directory where output of the pipeline will be placed. Follow the link to the pipeline files at the end of this manual.
 ```
-docker create                                                          \
-    -t                                                                 \
+docker create                                                              \
+        -t                                                                 \
 	-v /path/to/reads/in/your/system:/home/rnaseq/pipeline/input/reads \
 	-v /path/to/output/in/your/system:/home/rnaseq/pipeline/output     \
 	--workdir  /home/rnaseq/pipeline                                   \
 	--hostname rnaseq                                                  \
 	--name     rnaseq                                                  \
-      my-ubuntu-rnaseq:20.04
+          my-ubuntu-rnaseq:20.04
 ```
 ### 6. Run the pipeline from the container
 Once the container is successfully created, you can start it:
