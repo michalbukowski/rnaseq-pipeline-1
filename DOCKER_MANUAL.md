@@ -79,7 +79,7 @@ Inside the container your initial location will be `~/pipeline`:
        |--- refs/
             |--- rn.fna
 ```
-As you can see, you will find there Snakefile describing the pipeline. Necessary scripts will be in `~/pipeline/scripts`. In `~/pipeline/input/refs` you will have `rn.fna` multiple FASTA file with reference transcript sequences for Staphylococcus aureus RN4220. In `~/pipeline/input/reads` you should see reads from the linked directory `/path/to/reads/in/your/system`. You should also see `~/pipeline/output` which will be linked to `/path/to/output/in/your/system`. You can run the DGE pipeline on as many cores as you wish by tiping the following command:
+As you can see, you will find there Snakefile describing the pipeline. Necessary scripts will be in `~/pipeline/scripts`. In `~/pipeline/input/refs` you will have `rn.fna` multiple FASTA file with reference transcript sequences for _Staphylococcus aureus_ RN4220. In `~/pipeline/input/reads` you should see reads from the linked directory `/path/to/reads/in/your/system`. You should also see `~/pipeline/output` which will be linked to `/path/to/output/in/your/system`. You can run the DGE pipeline on as many cores as you wish by tiping the following command:
 ```
 snakemake --cores number_of_cores
 ```
