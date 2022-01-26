@@ -53,3 +53,4 @@ Providing that you have the environment properly set up, you can run the pipelin
 ```
 snakemake --cores number_of_cores
 ```
+You can run the pipeline in a already set up environment available as a Docker image. See `DOCKER_MANUAL.md` file for instructions.
