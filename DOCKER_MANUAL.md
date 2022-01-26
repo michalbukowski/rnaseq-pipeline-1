@@ -71,18 +71,18 @@ docker exec -it rnaseq bash
 Inside the container your initial location will be `~/pipeline`, where the following pipeline directory structure will be created:
 ```
 ~/pipeline/
-  |--- Snakefile
-  |--- scripts/
-  |    |--- collect.py
-  |    |--- dge.r
-  |    |--- summary.py
-  |--- input/
-  |    |--- reads/
-  |    |    |--- (...)
-  |    |--- refs/
-  |         |--- rn.fna
-  |--- output/
-  |--- log/
+  ├── Snakefile
+  ├── scripts/
+  │   ├── collect.py
+  │   ├── dge.r
+  │   └── summary.py
+  ├── input/
+  │   ├── reads/
+  │   │   └── (...)
+  │   └── refs/
+  │       └── rn.fna
+  ├── output/
+  └── log/
 ```
 As you can see, you will find there Snakefile describing the pipeline. Necessary scripts will be in `scripts/`. In `input/refs/` you will have `rn.fna` multiple FASTA file with reference transcript sequences for _Staphylococcus aureus_ RN4220. In `input/reads/` you should see reads from the linked directory `/path/to/reads/in/your/system/`. You should also see `output/` which will be linked to `/path/to/output/in/your/system/`. Once the pipeline is run, `log/` directory will be automatically created. All diagnostic and error messages from tools and scripts used by the pipeline will be redirected to files in that directory. You can run the DGE pipeline on as many cores as you wish by typing the following command:
 ```
