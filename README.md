@@ -23,18 +23,18 @@ Names of the FASTQ files with reads in [NCBI BioProject](https://www.ncbi.nlm.ni
 The pipeline utilises the following directory structure:
 ```
 your_pipeline_location/
-|--- Snakefile
-|--- scripts/
-|    |--- collect.py
-|    |--- dge.r
-|    |--- summary.py
-|--- input/
-|    |--- reads/
-|    |    |--- (...)
-|    |--- refs/
-|         |--- rn.fna
-|--- output/
-|--- log/
+├── Snakefile
+├── scripts/
+│   ├── collect.py
+│   ├── dge.r
+│   └── summary.py
+├── input/
+│   ├── reads/
+│   │   └── (...)
+│   └── refs/
+│       └── rn.fna
+├── output/
+└── log/
 ```
 In the working directory you can find the Snakefile describing the pipeline. Necessary scripts are in `scripts/`. In `input/refs/` you will have `rn.fna` multiple FASTA file with reference transcript sequences for Staphylococcus aureus RN4220. In `input/reads/` you should place reads from [NCBI BioProject](https://www.ncbi.nlm.nih.gov/bioproject/) [`PRJNA798259`](https://www.ncbi.nlm.nih.gov/bioproject?term=PRJNA798259%5BProject%20Accession%5D). Directories `output/` and `log/` will be created automatically once the pipeline is run. All diagnostic and error messages from tools and scripts used by the pipeline will be redirected to files in the `log/` directory.
 
