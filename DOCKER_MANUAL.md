@@ -5,7 +5,7 @@ Bukowski M, Kosecka-Strojek M, Madry A, Zagorski-Przybylo R, Zadlo T, Gawron K, 
 
 If you find the pipeline useful, please cite the paper.
 
-### 1. Setup the environment (optional but recommended)
+### 1. Set up the environment (optional but recommended)
 Optionally, in order to allow your user to run docker without root privileges, create a group docker and add your user to it by replacing `your_user_name` with your user name. That however will itself require root privileges.
 ```
 sudo groupadd docker
@@ -84,7 +84,7 @@ Inside the container your initial location will be `~/pipeline`, where the follo
   |--- output/
   |--- log/
 ```
-As you can see, you will find there Snakefile describing the pipeline. Necessary scripts will be in `scripts/`. In `input/refs/` you will have `rn.fna` multiple FASTA file with reference transcript sequences for _Staphylococcus aureus_ RN4220. In `input/reads/` you should see reads from the linked directory `/path/to/reads/in/your/system/`. You should also see `output/` which will be linked to `/path/to/output/in/your/system/`. Once the pipeline is run, `log/` directory will be automatically created. All diagnostic and error messages from tools and scripts used by the pipeline will be redirected to files in that directory. You can run the DGE pipeline on as many cores as you wish by tiping the following command:
+As you can see, you will find there Snakefile describing the pipeline. Necessary scripts will be in `scripts/`. In `input/refs/` you will have `rn.fna` multiple FASTA file with reference transcript sequences for _Staphylococcus aureus_ RN4220. In `input/reads/` you should see reads from the linked directory `/path/to/reads/in/your/system/`. You should also see `output/` which will be linked to `/path/to/output/in/your/system/`. Once the pipeline is run, `log/` directory will be automatically created. All diagnostic and error messages from tools and scripts used by the pipeline will be redirected to files in that directory. You can run the DGE pipeline on as many cores as you wish by typing the following command:
 ```
 snakemake --cores number_of_cores
 ```
@@ -94,7 +94,7 @@ docker stop rnaseq
 ```
 
 ### Appendix
-Names of the FASTQ files with reads in [NCBI BioProject](https://www.ncbi.nlm.nih.gov/bioproject/) [`PRJNA798259`](https://www.ncbi.nlm.nih.gov/bioproject?term=PRJNA798259%5BProject%20Accession%5D) follow the pattern, which is required by the pipeline: `{strain}_{group}_{setting}_{replica}_{reads}.fastq`, e.g. `rn_wt_lg_1_R1.fastq`. Regarging strain, in the project data there are files only for `rn` (_Staphylococcus aureus_ RN4220). There are two groups: `wt` (wild type, the reference group), `mt` (mutant, _saoC_ gene mutant), sampled in two settings/conditions: `lg` (logarithmic growth phase) and `lt` (late growth phase). For each there are 3 replicas (`1` -- `3`). Reads of each are written to two files: `R1` and `R2`. All in all, there are 24 files.
+Names of the FASTQ files with reads in [NCBI BioProject](https://www.ncbi.nlm.nih.gov/bioproject/) [`PRJNA798259`](https://www.ncbi.nlm.nih.gov/bioproject?term=PRJNA798259%5BProject%20Accession%5D) follow the pattern, which is required by the pipeline: `{strain}_{group}_{setting}_{replica}_{reads}.fastq`, e.g. `rn_wt_lg_1_R1.fastq`. Regarding strain, in the project data there are files only for `rn` (_Staphylococcus aureus_ RN4220). There are two groups: `wt` (wild type, the reference group), `mt` (mutant, _saoC_ gene mutant), sampled in two settings/conditions: `lg` (logarithmic growth phase) and `lt` (late growth phase). For each there are 3 replicas (`1` -- `3`). Reads of each are written to two files: `R1` and `R2`. All in all, there are 24 files.
 
 Wild type in the logarithmic growth phase:
 ```
