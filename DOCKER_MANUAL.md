@@ -48,7 +48,7 @@ docker build                                 \
           ./
 ```
 ### 5. Create the _rnaseq_ container
-Having your personalised image, now you can create a container from that image. The `/path/to/reads/in/your/system` must indicate the directory with RNA-Seq reads in FASTQ format (uncompressed). The reads are available at NCBI SRA database through [NCBI BioProject](https://www.ncbi.nlm.nih.gov/bioproject/) accession number [`PRJNA798259`](https://www.ncbi.nlm.nih.gov/bioproject?term=PRJNA798259%5BProject%20Accession%5D). File names must be preserved. See the list of RNA-Seq result files in the appendix. The path `/path/to/output/in/your/system` must indicate a directory where output of the pipeline will be placed. Follow the link to the pipeline files at the end of this manual.
+Having your personalised image, now you can create a container from that image. The `/path/to/reads/in/your/system` must indicate the directory with RNA-Seq reads in FASTQ format (uncompressed). The reads are available at NCBI SRA database through [NCBI BioProject](https://www.ncbi.nlm.nih.gov/bioproject/) accession number [`PRJNA798259`](https://www.ncbi.nlm.nih.gov/bioproject?term=PRJNA798259%5BProject%20Accession%5D). File names must be preserved. See the list of RNA-Seq result files in the appendix. The path `/path/to/output/in/your/system` must indicate a directory where output of the pipeline will be placed.
 ```
 docker create                                                              \
         -t                                                                 \
