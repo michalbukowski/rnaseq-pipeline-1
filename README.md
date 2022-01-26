@@ -53,4 +53,4 @@ Providing that you have the environment properly set up, you can run the pipelin
 ```
 snakemake --cores number_of_cores
 ```
-You can run the pipeline in a already set up environment available as a Docker image. See `DOCKER_MANUAL.md` file for instructions.
+You can run the pipeline in a already set up environment available as a Docker image. See [`DOCKER_MANUAL.md`](https://github.com/michalbukowski/rnaseq_pipeline/blob/main/DOCKER_MANUAL.md) file for instructions.
