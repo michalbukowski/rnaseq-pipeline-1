@@ -3,6 +3,8 @@ The following manual was tested on Docker ver. 18.09.7, and describes how to run
 
 Bukowski M, Kosecka-Strojek M, Madry A, Zagorski-Przybylo R, Zadlo T, Gawron K, Wladyka B (2022) _Staphylococcal saoABC operon codes for a DNA-binding protein SaoC implicated in the response to nutrient deficit_. [awaiting publication]
 
+If you find the pipeline useful, please cite the paper.
+
 ### 1. Setup the environment (optional but recommended)
 Optionally, in order to allow your user to run docker without root privileges, create a group docker and add your user to it. That however will itself require root privileges.
 ```
