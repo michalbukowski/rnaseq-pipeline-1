@@ -1,7 +1,7 @@
 ## Simple RNA-Seq pipeline
 Differential gene expression pipeline utilising Salmon and Bioconductor DESeq2 for Illumina RNA-Seq sequencing results for reversed stranded libraries. For detail see the following paper:
 
-Bukowski M, Kosecka-Strojek M, Madry A, Zagorski-Przybylo R, Zadlo T, Gawron K, Wladyka B (2022) _Staphylococcal saoABC operon codes for a DNA-binding protein SaoC implicated in the response to nutrient deficit_. [awaiting publication]
+Bukowski M, Kosecka-Strojek M, Madry A, Zagorski-Przybylo R, Zadlo T, Gawron K, Wladyka B (2022) _Staphylococcal saoABC operon codes for a DNA-binding protein SaoC implicated in the response to nutrient deficit_. International Journal of Molecular Sciences, 23(12), 6443.
 
 If you find the pipeline useful, please cite the paper.
 
