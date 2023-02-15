@@ -15,9 +15,9 @@ import pandas as pd
 
 def parse_args():
     '''Parse arguments:
-    input  -- a list of directories with Salmon quant files
-    output -- a TSV file with metadata on biological replicas from different
-              groups dedicated for one differential analysis
+    --input  -- a list of directories with Salmon quant files
+    --output -- a TSV file with metadata on biological replicas from different
+                groups dedicated for one differential analysis
     '''
     parser = argparse.ArgumentParser()
 

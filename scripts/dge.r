@@ -17,10 +17,10 @@ suppressMessages(library("tximport"))
 suppressMessages(library("optparse"))
 
 # Parse the arguments:
-# meta   -- a TSV file with metadata assigning quant files from one strain
-#           and setting to different experimetnal groups that are to be compared
-# ref    -- group name that is meant to be used as reference in DGE
-# output -- a TSV file with DGE output data
+# --meta   -- a TSV file with metadata assigning quant files from one strain and
+#             setting to different experimetnal groups that are to be compared
+# --ref    -- group name that is meant to be used as reference in DGE
+# --output -- a TSV file with DGE output data
 option_list = list(
     make_option(c("--meta"), type="character", default=NULL,
                 help="Metadata that describe samples (quant files)",

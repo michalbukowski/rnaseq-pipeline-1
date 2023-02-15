@@ -15,11 +15,11 @@ import pandas as pd
 
 def parse_args():
     '''Parse arguments:
-    meta   -- a TSV file with metadata on biological replicas from different
-              groups dedicated for one differential analysis and generated with
-              collect.py script
-    dge    -- a TSV file with DGE output data generatged with dge.r script
-    output -- the final TSV file with all data intergrated
+    --meta   -- a TSV file with metadata on biological replicas from different
+                groups dedicated for one differential analysis and generated with
+                collect.py script
+    --dge    -- a TSV file with DGE output data generatged with dge.r script
+    --output -- the final TSV file with all data intergrated
     '''
     parser = argparse.ArgumentParser()
 
