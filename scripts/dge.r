@@ -1,4 +1,5 @@
 #!/usr/bin/env Rscript
+# Created by Michal Bukowski (michal.bukowski@tuta.io) under GPL-3.0 license
 
 # This script is meant to function as a part of a Snakemake pipeline.
 # R script for differential gene expression utilising Bioconductor DESeq2 and
@@ -8,7 +9,7 @@
 # If you find it useful, please cite:
 # Bukowski M et al. (2022) Staphylococcal saoABC operon codes for
 # a DNA-binding protein SaoC implicated in the response to nutrient deficit.
-# [awaiting publication]
+# International Journal of Molecular Sciences, 23(12), 6443.
 
 # Import libraries
 suppressMessages(library("DESeq2"))

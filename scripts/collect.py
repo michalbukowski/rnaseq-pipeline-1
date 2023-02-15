@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Created by Michal Bukowski (michal.bukowski@tuta.io) under GPL-3.0 license
 
 # This script is meant to function as a part of a Snakemake pipeline.
 # Python script for preparation of metadata files that point to Salmon quant
@@ -7,7 +8,7 @@
 # If you find it useful, please cite:
 # Bukowski M et al. (2022) Staphylococcal saoABC operon codes for
 # a DNA-binding protein SaoC implicated in the response to nutrient deficit.
-# [awaiting publication]
+# International Journal of Molecular Sciences, 23(12), 6443.
 
 import argparse, os
 import pandas as pd
