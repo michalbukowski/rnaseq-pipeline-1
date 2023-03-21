@@ -1,3 +1,5 @@
+# Created by Michal Bukowski (michal.bukowski@tuta.io) under GPL-3.0 license
+
 # Differential gene expression pipeline utilising Salmon and Bioconductor DESeq2
 # for Illumina RNA-Seq squencing results for reversed stranded libraries.
 
